@@ -7,7 +7,7 @@ import Footer from '../components/footer';
 
 const Home: React.FC = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 bg-gray-100 ">
       <Header />
       <Experience />
       <Education />
