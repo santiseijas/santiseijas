@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-dot-pattern text-gray-800;
+}
+
+h1 {
+  @apply mt-8 text-5xl font-bold;
+}
+
+h3 {
+  @apply text-gray-700 hover:text-gray-400;
+}
+
+p {
+  @apply mt-8 text-xl text-gray-500;
+}

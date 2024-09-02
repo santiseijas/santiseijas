@@ -1,43 +1,89 @@
-import React from 'react'
+import ProjectCard from '@/src/components/projectCard'
+
+const projects = [
+  {
+    name: 'Eccocar',
+    technologies: ['React Native', 'Firebase', 'TypeScript', 'Jenkins'],
+    images: [
+      {
+        src: 'https://play-lh.googleusercontent.com/dYfdD_INFez_5gESF9sOl1lGbhMyVvpHJByNqA3U3LqLhgYoHTxfmH5ZOpCmwG8q4yA=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/dYfdD_INFez_5gESF9sOl1lGbhMyVvpHJByNqA3U3LqLhgYoHTxfmH5ZOpCmwG8q4yA=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/omq5XKXSFHHP0_5DvfCz-JH1fA5PhBRLdio16BaPC9ak-l0SdSQLMRlzPvigtUVTinYW=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/omq5XKXSFHHP0_5DvfCz-JH1fA5PhBRLdio16BaPC9ak-l0SdSQLMRlzPvigtUVTinYW=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/PPW59XCiAp7VI5lugGdl7wmUFxGbj2k8SvDBZnwnHrhnvHVoH2uCkuDfUTpjlC7JCX4=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/PPW59XCiAp7VI5lugGdl7wmUFxGbj2k8SvDBZnwnHrhnvHVoH2uCkuDfUTpjlC7JCX4=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/HVHQTjzjnuIknUELXn4H_bQw1GqP_GxE09w-oM_EGi8rX06mPdXSiF3L1CF2prkM_b85=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/HVHQTjzjnuIknUELXn4H_bQw1GqP_GxE09w-oM_EGi8rX06mPdXSiF3L1CF2prkM_b85=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/-CyrXP4-n0bHiQMR6PMZ_WBSyRnuCMT33ivYuLrAqnaeKGb7xb0yczmQRj_ksHZDuSw=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/-CyrXP4-n0bHiQMR6PMZ_WBSyRnuCMT33ivYuLrAqnaeKGb7xb0yczmQRj_ksHZDuSw=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/5pOQWxG6QE0X5xrMwPFYN_QWzJpOm6fq8QnEZdYDiCOhsj28R9UX8QFcdA12df5jaBU=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/5pOQWxG6QE0X5xrMwPFYN_QWzJpOm6fq8QnEZdYDiCOhsj28R9UX8QFcdA12df5jaBU=w526-h296-rw'
+      }
+    ]
+  },
+  {
+    name: 'SABA Parking',
+    technologies: ['React Native', 'TypeScript', 'GitlabCI', 'Detox'],
+    images: [
+      {
+        src: 'https://play-lh.googleusercontent.com/etxDEgp5xYthHzgmmT45VUCoC5wBNFannt2Hvx1oqD643ir5aKIwqEEC4R96001y5xo=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/etxDEgp5xYthHzgmmT45VUCoC5wBNFannt2Hvx1oqD643ir5aKIwqEEC4R96001y5xo=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/vCb8vcoijgWfC0koTs7R8clS3tij9sIOr9QXjw3RgZ1Q7e15DITbfM8wrtJxb7FyvQ=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/vCb8vcoijgWfC0koTs7R8clS3tij9sIOr9QXjw3RgZ1Q7e15DITbfM8wrtJxb7FyvQ=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/Egpr8WGSItHHpIFeonG3SECYwl0ddibEe8di_8XTA8IIVnWB8VqxkEu3iCoGn1hB_7E=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/Egpr8WGSItHHpIFeonG3SECYwl0ddibEe8di_8XTA8IIVnWB8VqxkEu3iCoGn1hB_7E=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/jMB-WJLcCnaYx8mST4mnogstIVIku-afgou_qCGjS_k2f9rKn3e64eFbHIeI-pJjuk-v=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/jMB-WJLcCnaYx8mST4mnogstIVIku-afgou_qCGjS_k2f9rKn3e64eFbHIeI-pJjuk-v=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/buV-I_psSWACoaYyfOZmVjymF7pesKhUeM_IeU0hMJ86TrNVCcuwuDVrj-5bif8CfQ=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/buV-I_psSWACoaYyfOZmVjymF7pesKhUeM_IeU0hMJ86TrNVCcuwuDVrj-5bif8CfQ=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/pu8-zfPe3y2GJWDWfrLSTxUd3jV2wxzaiHr0-qdOk3d_mfpqquRdkSN0OFEvR-C7Lg=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/pu8-zfPe3y2GJWDWfrLSTxUd3jV2wxzaiHr0-qdOk3d_mfpqquRdkSN0OFEvR-C7Lg=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/JJiqYxgfKo22_N4cbRZva77DlontNjuzaHyMmIk-bIEZjM7Xycy255VpX76ukrnJX1k=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/JJiqYxgfKo22_N4cbRZva77DlontNjuzaHyMmIk-bIEZjM7Xycy255VpX76ukrnJX1k=w526-h296-rw'
+      },
+      {
+        src: 'https://play-lh.googleusercontent.com/q_v1tiXqhpu4qnGRKzLIlWUglOfsAf7aCA0Pf6uUALSyicYx49Qzb8Qxt__rDtawmoQ=w526-h296-rw',
+        alt: 'https://play-lh.googleusercontent.com/q_v1tiXqhpu4qnGRKzLIlWUglOfsAf7aCA0Pf6uUALSyicYx49Qzb8Qxt__rDtawmoQ=w526-h296-rw'
+      }
+    ]
+  }
+]
 
 const Experience: React.FC = () => {
   return (
-    <section className='my-8 p-6 bg-white shadow-lg rounded-lg'>
-      <h2 className='text-2xl font-semibold mb-4'>Experiencia</h2>
-      <div className='mb-6'>
-        <h3 className='text-xl font-bold'>React Native Developer, Vass</h3>
-        <p className='text-sm text-gray-600'>Mar 2024</p>
-        <ul className='list-disc list-inside'>
-          <li>Participación en el desarrollo y mantenimiento de la aplicación móvil de SABA.</li>
-          <li>Desarrollo de nuevas funcionalidades utilizando React Native y TypeScript.</li>
-          <li>Gestión del ciclo completo de vida de la aplicación.</li>
-          <li>Implementación de pruebas unitarias y automáticas.</li>
-          <li>Refactorización de código existente.</li>
-        </ul>
+    <div>
+      <h1>Experience</h1>
+      <div className='flex flex-col items-center'>
+        {projects.map(project => (
+          <div key={project.name} className='mb-8 max-w-6xl'>
+            <ProjectCard key={project.name} {...project} images={project.images} />
+          </div>
+        ))}
       </div>
-      <div className='mb-6'>
-        <h3 className='text-xl font-bold'>React Native Developer, eccocar</h3>
-        <p className='text-sm text-gray-600'>Sep 2020 — Mar 2024</p>
-        <ul className='list-disc list-inside'>
-          <li>Desarrollo de aplicaciones móviles y web para soluciones de movilidad.</li>
-          <li>Creación de una plataforma web utilizando Angular.</li>
-          <li>Colaboración en un entorno ágil.</li>
-        </ul>
-      </div>
-      <div className='mb-6'>
-        <h3 className='text-xl font-bold'>Prácticas Java Developer, Indra</h3>
-        <p className='text-sm text-gray-600'>Mar 2019 — Ago 2020</p>
-      </div>
-      <div className='mb-6'>
-        <h3 className='text-xl font-bold'>Gestor Comercial, Abanca</h3>
-        <p className='text-sm text-gray-600'>Jun 2016 — Feb 2018</p>
-      </div>
-      <div>
-        <h3 className='text-xl font-bold'>Camarero, Pizzerias Cambalache</h3>
-        <p className='text-sm text-gray-600'>Ago 2014 — Jun 2020</p>
-      </div>
-    </section>
+      <div className='w-full md:w-1/2 md:max-w-lg'></div>
+    </div>
   )
 }
-
 export default Experience

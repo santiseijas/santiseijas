@@ -6,8 +6,9 @@ module.exports = {
   bracketSpacing: true,
   jsxBracketSameLine: false,
   useTabs: false,
-  arrowParens: "avoid",
+  arrowParens: 'avoid',
   jsxSingleQuote: true,
-  trailingComma: "none",
-  endOfLine: "auto",
-};
+  trailingComma: 'none',
+  endOfLine: 'auto',
+  plugins: ['prettier-plugin-organize-imports', 'prettier-plugin-tailwindcss']
+}
