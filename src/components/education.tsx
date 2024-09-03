@@ -2,7 +2,7 @@ import React from 'react'
 
 const Education: React.FC = () => {
   return (
-    <section className='my-8 rounded-lg p-6 shadow-lg'>
+    <section className='my-8 rounded-lg shadow-lg'>
       <h2 className='mb-4 text-2xl font-semibold'>Formación</h2>
       <div className='mb-4'>
         <h3 className='text-xl font-bold'>

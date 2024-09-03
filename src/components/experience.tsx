@@ -3,6 +3,8 @@ import ProjectCard from '@/src/components/projectCard'
 const projects = [
   {
     name: 'Eccocar',
+    description:
+      'A white-label application for vehicle rentals, offering both micromobility options (rentals by the minute) and longer-term rentals (rent a car). Responsible for all aspects of the app, including new feature development, bug fixing, and managing app store submissions.',
     technologies: ['React Native', 'Firebase', 'TypeScript', 'Jenkins'],
     images: [
       {
@@ -33,6 +35,8 @@ const projects = [
   },
   {
     name: 'SABA Parking',
+    description:
+      'An app for reserving and paying for parking, focused on the UK market. Responsible for error correction, app maintenance, and implementing new features as requested by the client.',
     technologies: ['React Native', 'TypeScript', 'GitlabCI', 'Detox'],
     images: [
       {
@@ -73,16 +77,13 @@ const projects = [
 
 const Experience: React.FC = () => {
   return (
-    <div>
-      <h1>Experience</h1>
-      <div className='flex flex-col items-center'>
-        {projects.map(project => (
-          <div key={project.name} className='mb-8 max-w-6xl'>
-            <ProjectCard key={project.name} {...project} images={project.images} />
-          </div>
-        ))}
-      </div>
-      <div className='w-full md:w-1/2 md:max-w-lg'></div>
+    <div className='max-w-5xl space-y-5'>
+      <h2>Experience</h2>
+      {projects.map(project => (
+        <div key={project.name}>
+          <ProjectCard key={project.name} {...project} images={project.images} />
+        </div>
+      ))}
     </div>
   )
 }

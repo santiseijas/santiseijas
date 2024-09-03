@@ -10,19 +10,20 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 interface Project {
   name: string
+  description: string
   technologies: string[]
   images: { src: string; alt: string }[]
   link?: string
 }
 
-const ProjectCard: React.FC<Project> = ({ name, technologies, images, link }) => {
+const ProjectCard: React.FC<Project> = ({ name, description, technologies, images, link }) => {
   return (
     <div className='flex flex-col space-y-8 md:flex-row md:space-x-8 md:space-y-0'>
       <div className='w-full flex-grow md:w-1/2'>
         <Swiper modules={[Navigation, A11y, Autoplay]} spaceBetween={5} slidesPerView={3} autoplay={true}>
           {images.map(i => (
             <SwiperSlide key={i.alt}>
-              <div className='h-60'>
+              <div className='h-80'>
                 <Image src={i.src} alt={i.alt} fill style={{ objectFit: 'fill', borderRadius: '0.375rem' }} />
               </div>
             </SwiperSlide>
@@ -42,6 +43,9 @@ const ProjectCard: React.FC<Project> = ({ name, technologies, images, link }) =>
             ))}
           </ul>
         </div>
+        <h3 className='relative flex flex-col gap-2 pb-4 text-gray-600 md:col-span-3 dark:text-gray-300'>
+          {description}
+        </h3>
       </div>
     </div>
   )
