@@ -1,38 +1,37 @@
+import Image from 'next/image'
 import React from 'react'
 import Footer from './footer'
+import FullScreenWrapper from './fullScreenWrapper'
 
 const Contact: React.FC = () => {
   return (
-    <div className='flex min-h-screen flex-col justify-between'>
-      {/* Main content */}
-      <section className='my-8 p-6'>
-        <h2 className='mb-4 text-2xl font-semibold'>Contacto</h2>
-        <p className='mb-2'>
-          <strong>Teléfono:</strong> 657804576
-        </p>
-        <p className='mb-2'>
-          <strong>Email:</strong>{' '}
-          <a href='mailto:seijas.santi@gmail.com' className='text-blue-500'>
-            seijas.santi@gmail.com
-          </a>
-        </p>
-        <p className='mb-2'>
-          <strong>LinkedIn:</strong>{' '}
-          <a href='https://www.linkedin.com/in/santiseijas' className='text-blue-500'>
-            www.linkedin.com/in/santiseijas
-          </a>
-        </p>
-        <p>
-          <strong>GitHub:</strong>{' '}
-          <a href='https://github.com/santiseijas' className='text-blue-500'>
-            github.com/santiseijas
-          </a>
-        </p>
-      </section>
+    <FullScreenWrapper>
+      <div className='flex min-h-screen max-w-5xl flex-col justify-between'>
+        <div className='flex flex-grow items-center'>
+          <div className='flex w-1/3 flex-col'>
+            <Image
+              width='800'
+              height='800'
+              src='/assets/profile.jpeg'
+              alt='me'
+              className='mt-4 aspect-square w-64 rotate-2 rounded-2xl bg-black/20 p-1 ring-black/70 lg:w-80 lg:p-2 dark:bg-yellow-500/5 dark:ring-white/20'
+            />
+          </div>
 
-      {/* Footer */}
-      <Footer />
-    </div>
+          <div className='pl-10'>
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            </h3>
+          </div>
+        </div>
+
+        <Footer />
+      </div>
+    </FullScreenWrapper>
   )
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Contact from '../components/contact'
 import Experience from '../components/experience'
 import Profile from '../components/profile'
+import Timeline from '../components/timeline'
 
 const HomeScreen: React.FC = () => {
   const techStack = [
@@ -15,7 +16,7 @@ const HomeScreen: React.FC = () => {
 
   return (
     <div className='scrollbar-hide h-screen snap-y snap-mandatory overflow-y-scroll'>
-      <section id='profile' className='flex h-screen snap-start flex-col justify-center'>
+      <section id='home' className='flex h-screen snap-start flex-col justify-center'>
         <Profile
           title='hello, I´m santiseijas'
           subtitle="I'm a Frontend Developer with 4 years of experience in React Native and 1 year of experience in React. Born and living in Spain 🇪🇸"
@@ -24,6 +25,9 @@ const HomeScreen: React.FC = () => {
         />
       </section>
       <section id='experience' className='flex h-screen snap-start flex-col justify-center'>
+        <Timeline />
+      </section>
+      <section id='projects' className='flex h-screen snap-start flex-col justify-center'>
         <Experience />
       </section>
       <section id='contact' className='flex h-screen snap-start flex-col justify-center'>

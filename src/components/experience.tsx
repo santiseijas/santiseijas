@@ -1,4 +1,5 @@
 import ProjectCard from '@/src/components/projectCard'
+import FullScreenWrapper from './fullScreenWrapper'
 
 const projects = [
   {
@@ -38,6 +39,7 @@ const projects = [
     description:
       'An app for reserving and paying for parking, focused on the UK market. Responsible for error correction, app maintenance, and implementing new features as requested by the client.',
     technologies: ['React Native', 'TypeScript', 'GitlabCI', 'Detox'],
+    link: 'https://play.google.com/store/apps/details?id=com.saba.parking',
     images: [
       {
         src: 'https://play-lh.googleusercontent.com/etxDEgp5xYthHzgmmT45VUCoC5wBNFannt2Hvx1oqD643ir5aKIwqEEC4R96001y5xo=w526-h296-rw',
@@ -77,14 +79,15 @@ const projects = [
 
 const Experience: React.FC = () => {
   return (
-    <div className='max-w-5xl space-y-5'>
-      <h2>Experience</h2>
-      {projects.map(project => (
-        <div key={project.name}>
-          <ProjectCard key={project.name} {...project} images={project.images} />
-        </div>
-      ))}
-    </div>
+    <FullScreenWrapper>
+      <div className='max-w-5xl space-y-5'>
+        {projects.map(project => (
+          <div key={project.name}>
+            <ProjectCard key={project.name} {...project} images={project.images} />
+          </div>
+        ))}
+      </div>
+    </FullScreenWrapper>
   )
 }
 export default Experience

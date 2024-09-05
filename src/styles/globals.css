@@ -11,11 +11,11 @@ h1 {
 }
 
 h2 {
-  @apply text-3xl font-semibold;
+  @apply text-2xl font-bold;
 }
 
 h3 {
-  @apply text-gray-700;
+  @apply text-gray-600;
 }
 
 p {
