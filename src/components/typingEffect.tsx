@@ -50,11 +50,10 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
   }, [])
 
   return (
-    <h1 className='tracking-tight text-zinc-800 sm:text-5xl dark:text-white'>
-      hello, I’m
-      <span>{text}</span>
+    <h2 className='tracking-tight text-zinc-800 dark:text-white'>
+      hello, I’m <span>{text}</span>
       <span className={`ml-1 inline-block h-14 w-1 translate-y-3 ${showCursor ? 'bg-black' : 'bg-transparent'}`} />
-    </h1>
+    </h2>
   )
 }
 

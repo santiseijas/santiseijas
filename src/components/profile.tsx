@@ -13,15 +13,14 @@ interface ProfileProps {
 const Profile: React.FC<ProfileProps> = ({ title, subtitle, link, techStack }) => {
   return (
     <FullScreenWrapper>
-      <div className='space-y-5'>
-        <div className='space-y-2'>
-          <div className='relative h-[150px] w-[150px]'>
+      <div className=''>
+        <div className=''>
+          <div className='relative h-[120px] w-[150px]'>
             <Image
               src='/assets/profile.jpeg'
               alt='profile'
               width={150}
               height={150}
-              className='absolute inset-0 object-cover'
               style={{ borderRadius: '70% 95% 55% 80%' }}
             />
           </div>
@@ -29,15 +28,15 @@ const Profile: React.FC<ProfileProps> = ({ title, subtitle, link, techStack }) =
           <div className='max-w-2xl'>
             <h3 className='mt-2'>{subtitle}</h3>
           </div>
-          <a href={link} className='text-blue-500 underline'>
+          <a href={link} className='underline sm:text-blue-500'>
             Find out more.
           </a>
         </div>
         <div className='space-y-2'>
           <h2 className='mt-8'>Tech Stack</h2>
-          <div className='flex gap-4'>
+          <div className='grid grid-cols-4 gap-4 sm:grid-cols-2 md:flex md:gap-4'>
             {techStack.map(tech => (
-              <Image key={tech.alt} src={tech.src} alt={tech.alt} width={70} height={70} />
+              <Image key={tech.alt} src={tech.src} alt={tech.alt} width={70} height={70} className='h-16 w-16' />
             ))}
           </div>
         </div>

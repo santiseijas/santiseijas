@@ -1,5 +1,4 @@
 import React from 'react'
-import Contact from '../components/contact'
 import Experience from '../components/experience'
 import Profile from '../components/profile'
 import Projects from '../components/projects'
@@ -16,7 +15,7 @@ const HomeScreen: React.FC = () => {
 
   return (
     <div className='h-screen snap-y snap-mandatory overflow-y-scroll scrollbar-hide'>
-      <section id='home' className='flex h-screen snap-start flex-col items-center justify-center p-4'>
+      <section id='home' className='snap-start flex-col'>
         <Profile
           title='hello, I´m santiseijas'
           subtitle="I'm a Frontend Developer with 4 years of experience in React Native and 1 year of experience in React. Born and living in Spain 🇪🇸"
@@ -24,15 +23,16 @@ const HomeScreen: React.FC = () => {
           techStack={techStack}
         />
       </section>
-      <section id='experience' className='flex h-screen snap-start flex-col items-center justify-center p-4'>
+
+      <section id='experience' className='snap-start flex-col'>
         <Experience />
       </section>
-      <section id='projects' className='flex h-screen snap-start flex-col items-center justify-center p-4'>
+      <section id='projects' className='snap-start flex-col'>
         <Projects />
       </section>
-      <section id='contact' className='flex h-screen snap-start flex-col items-center justify-center p-4'>
+      {/* <section id='contact' className='flex h-screen snap-start flex-col items-center justify-center p-4'>
         <Contact />
-      </section>
+      </section> */}
     </div>
   )
 }
