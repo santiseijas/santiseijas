@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import FullScreenWrapper from './fullScreenWrapper'
+import TypingEffect from './typingEffect'
 
 interface ProfileProps {
   title: string
@@ -14,9 +15,17 @@ const Profile: React.FC<ProfileProps> = ({ title, subtitle, link, techStack }) =
     <FullScreenWrapper>
       <div className='space-y-5'>
         <div className='space-y-2'>
-          <Image className='rounded-full' src='/assets/profile.jpeg' alt='profile' width={100} height={100} />
-
-          <h1 className='tracking-tight text-zinc-800 sm:text-5xl dark:text-white'>{title}</h1>
+          <div className='relative h-[150px] w-[150px]'>
+            <Image
+              src='/assets/profile.jpeg'
+              alt='profile'
+              width={150}
+              height={150}
+              className='absolute inset-0 object-cover'
+              style={{ borderRadius: '70% 95% 55% 80%' }}
+            />
+          </div>
+          <TypingEffect words={['santiseijas']} typingSpeed={100} deletingSpeed={50} pauseTime={1000} />{' '}
           <div className='max-w-2xl'>
             <h3 className='mt-2'>{subtitle}</h3>
           </div>
