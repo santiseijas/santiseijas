@@ -13,12 +13,11 @@ interface Project {
   description: string
   technologies: string[]
   images: { src: string; alt: string }[]
-  link?: string
 }
 
-const ProjectCard: React.FC<Project> = ({ name, description, technologies, images, link }) => {
+const ProjectCard: React.FC<Project> = ({ name, description, technologies, images }) => {
   return (
-    <div className='flex flex-col space-y-8 rounded-lg p-6 shadow-md transition hover:shadow-xl md:flex-row md:space-x-8 md:space-y-0'>
+    <div className='flex flex-col space-y-8 rounded-lg transition md:flex-row md:space-x-8 md:space-y-0'>
       <div className='w-full flex-grow md:w-1/2'>
         <Swiper modules={[Navigation, A11y, Autoplay]} spaceBetween={5} slidesPerView={3} autoplay={true}>
           {images.map(i => (
@@ -55,18 +54,6 @@ const ProjectCard: React.FC<Project> = ({ name, description, technologies, image
         <h3 className='relative flex flex-col gap-2 pb-4 text-gray-600 md:col-span-3 dark:text-gray-300'>
           {description}
         </h3>
-        {link && (
-          <div className='mt-6'>
-            <a
-              href={link}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='inline-block rounded-lg bg-blue-600 px-5 py-2.5 text-center text-white transition hover:bg-blue-500'
-            >
-              Explore Project
-            </a>
-          </div>
-        )}
       </div>
     </div>
   )

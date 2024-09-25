@@ -5,46 +5,28 @@ import TimelineItem from './timelineItem'
 const Timeline: React.FC = () => {
   return (
     <FullScreenWrapper>
-      <div className='relative mx-auto flex min-h-screen max-w-5xl flex-col justify-start border-l border-gray-700 py-10'>
+      <div className='relative mx-auto flex max-w-5xl flex-col justify-start border-l border-gray-700 py-10'>
         <TimelineItem
-          title='Still learning'
-          year='Now'
-          active={true}
+          title='React Native Developer,  VASS'
+          year='Mar 2024 - Now'
           description={[
-            "After some relaxed time, I'm back to learning and working.",
-            'Joined a start-up specializing in education technologies.'
+            'Participation in the development and maintenance of the SABA mobile application, a parking management company.',
+            'Developed new features and continuous improvements using React Native and TypeScript.',
+            'Managed the full application lifecycle, including deployment to the App Store and Google Play.',
+            'Implemented unit and automated tests to ensure code quality and application reliability.',
+            'Refactored existing code to optimize product performance and maintainability.'
           ]}
         />
         <TimelineItem
-          title='Learning and growing'
-          year='2022'
+          title='React Native Developer,  ECCOCAR'
+          year='Sep 2020 — Mar 2024'
           description={[
-            'Working to enhance and refine my JavaScript skills and abilities.',
-            'Acquiring knowledge and understanding of web accessibility principles.',
-            'Investigating design systems and testing methodologies.',
-            'Participating in open-source projects.'
+            'Development of white-label mobile and web applications for mobility solutions and vehicle rental.',
+            'Developed and maintained a white-label app using React Native.',
+            'Created a white-label web platform using Angular.',
+            'Collaborated in an agile environment, ensuring the delivery of high-quality products aligned with customer expectations.'
           ]}
         />
-        <TimelineItem
-          title='Landed first job as a developer'
-          year='2021'
-          description={[
-            'Joined a start-up specializing in e-commerce fulfillment, robotics, and logistics services.',
-            "Engaged in the development, maintenance, and optimization of the company's website.",
-            'Acquired knowledge in technologies such as JavaScript, React.js, TypeScript, Zustand, and Hubspot.'
-          ]}
-        />
-        <TimelineItem
-          title='Started to learn programming'
-          year='2020'
-          description={[
-            'Started with Python and transitioned into web development.',
-            'Completed numerous courses and several small-scale projects.',
-            'Utilized freecodecamp and The Odin Project as primary educational resources.',
-            'Successfully graduated from a bootcamp program.'
-          ]}
-        />
-        <TimelineItem title='Born' year='1989' description={[]} />
       </div>
     </FullScreenWrapper>
   )
