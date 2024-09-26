@@ -5,7 +5,7 @@ interface FullScreenWrapperProps {
 }
 
 const FullScreenWrapper: React.FC<FullScreenWrapperProps> = ({ children }) => {
-  return <div className='flex h-screen w-full items-center justify-center px-8'>{children}</div>
+  return <div className='flex max-w-2xl items-center justify-center px-8 py-16'>{children}</div>
 }
 
 export default FullScreenWrapper

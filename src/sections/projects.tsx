@@ -1,5 +1,5 @@
 import ProjectCard from '@/src/components/projectCard'
-import FullScreenWrapper from './fullScreenWrapper'
+import FullScreenWrapper from '../components/fullScreenWrapper'
 
 const projects = [
   {

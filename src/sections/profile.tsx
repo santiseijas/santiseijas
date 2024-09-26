@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import FullScreenWrapper from './fullScreenWrapper'
-import TypingEffect from './typingEffect'
+import FullScreenWrapper from '../components/fullScreenWrapper'
+import TypingEffect from '../components/typingEffect'
 
 interface ProfileProps {
   title: string
@@ -10,7 +10,16 @@ interface ProfileProps {
   techStack: { src: string; alt: string }[]
 }
 
-const Profile: React.FC<ProfileProps> = ({ title, subtitle, link, techStack }) => {
+const techStack = [
+  { src: '/assets/react-native.svg', alt: 'react-native' },
+  { src: '/assets/react.svg', alt: 'react' },
+  { src: '/assets/ts.svg', alt: 'typescript' },
+  { src: '/assets/js.svg', alt: 'javascript' },
+  { src: '/assets/css.svg', alt: 'css' },
+  { src: '/assets/html.svg', alt: 'html' }
+]
+
+const Profile: React.FC<ProfileProps> = ({ title, subtitle, link }) => {
   return (
     <FullScreenWrapper>
       <div className=''>
@@ -25,18 +34,16 @@ const Profile: React.FC<ProfileProps> = ({ title, subtitle, link, techStack }) =
             />
           </div>
           <TypingEffect words={['santiseijas']} typingSpeed={100} deletingSpeed={50} pauseTime={1000} />{' '}
-          <div className='max-w-2xl'>
-            <h3 className='mt-2'>{subtitle}</h3>
-          </div>
+          <h3 className='mt-2'>{subtitle}</h3>
           <a href={link} className='underline sm:text-blue-500'>
             Find out more.
           </a>
         </div>
         <div className='space-y-2'>
           <h2 className='mt-8'>Tech Stack</h2>
-          <div className='grid grid-cols-4 gap-4 sm:grid-cols-2 md:flex md:gap-4'>
+          <div className='flex flex-row gap-1'>
             {techStack.map(tech => (
-              <Image key={tech.alt} src={tech.src} alt={tech.alt} width={70} height={70} className='h-16 w-16' />
+              <Image key={tech.alt} src={tech.src} alt={tech.alt} width={70} height={70} className='h-10 w-10' />
             ))}
           </div>
         </div>

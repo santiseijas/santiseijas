@@ -1,12 +1,12 @@
 import React from 'react'
-import FullScreenWrapper from './fullScreenWrapper'
-import TimelineItem from './timelineItem'
+import FullScreenWrapper from '../components/fullScreenWrapper'
+import TimelineItem from '../components/timelineItem'
 
 const Experience: React.FC = () => {
   return (
     <FullScreenWrapper>
-      <div className='max-w-5xl flex-col py-1'>
-        <div className='w-full'>
+      <div className=''>
+        <section className='items-center justify-center'>
           <TimelineItem
             title='React Native Developer, VASS'
             year='Mar 2024 - Now'
@@ -18,8 +18,8 @@ const Experience: React.FC = () => {
               'Refactored existing code to optimize product performance and maintainability.'
             ]}
           />
-        </div>
-        <div className='w-full'>
+        </section>
+        <section className='items-center justify-center md:flex'>
           <TimelineItem
             title='React Native Developer, ECCOCAR'
             year='Sep 2020 — Mar 2024'
@@ -30,7 +30,7 @@ const Experience: React.FC = () => {
               'Collaborated in an agile environment, ensuring the delivery of high-quality products aligned with customer expectations.'
             ]}
           />
-        </div>
+        </section>
       </div>
     </FullScreenWrapper>
   )
