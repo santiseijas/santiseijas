@@ -3,7 +3,7 @@ import TimelineItem from '../components/timelineItem'
 
 const Experience: React.FC = () => {
   return (
-    <div className='py-10'>
+    <div className=''>
       <section className='items-center justify-center'>
         <TimelineItem
           title='React Native Developer, VASS'

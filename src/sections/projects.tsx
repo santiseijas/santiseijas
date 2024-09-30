@@ -78,7 +78,7 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <div className='py-10'>
+    <div className=''>
       <div className='justify-center py-1'>
         {projects.map(project => (
           <div key={project.name}>
