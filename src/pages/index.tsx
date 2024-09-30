@@ -1,4 +1,5 @@
 import React from 'react'
+import TitlePage from '../components/titlePage'
 import Experience from '../sections/experience'
 import Profile from '../sections/profile'
 import Projects from '../sections/projects'
@@ -30,8 +31,15 @@ const HomeScreen: React.FC = () => {
           </section>
 
           <section id='projects' className='mt-24 scroll-mt-20'>
+            <TitlePage title='Projects' />
+
             <Projects />
           </section>
+          {/* <section id='contact' className='mt-24 scroll-mt-20'>
+            <TitlePage title='Contact' />
+
+            <Contact />
+          </section> */}
         </div>
       </section>
     </main>

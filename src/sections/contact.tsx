@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Footer from './footer'
+import Footer from '../components/footer'
 
 const Contact: React.FC = () => {
   return (
@@ -8,8 +8,8 @@ const Contact: React.FC = () => {
       <div className='flex flex-grow items-center'>
         <div className='flex w-1/3 flex-col'>
           <Image
-            width='800'
-            height='800'
+            width={800}
+            height={800}
             src='/assets/profile.jpeg'
             alt='me'
             className='mt-4 aspect-square w-64 rotate-2 rounded-2xl bg-black/20 p-1 ring-black/70 lg:w-80 lg:p-2 dark:bg-yellow-500/5 dark:ring-white/20'

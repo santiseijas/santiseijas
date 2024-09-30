@@ -12,16 +12,13 @@ const ProjectCard: React.FC<Project> = ({ name, description, technologies, image
   return (
     <div className='space-y-4 rounded-lg pb-10'>
       <h2 className=''>{name}</h2>
-
-      {/* Contenedor de imágenes */}
-      <div className='grid grid-cols-2 overflow-x-auto sm:grid-cols-3 md:flex md:gap-px md:overflow-x-auto'>
+      <div className='grid gap-2 overflow-x-auto sm:grid-cols-3 md:flex md:overflow-x-auto lg:grid-cols-5'>
         {images.map(i => (
           <div key={i.src} className='relative mb-2 h-48 w-28 overflow-hidden rounded-lg shadow-md'>
             <Image src={i.src} alt={i.alt} layout='fill' />
           </div>
         ))}
       </div>
-
       <div className='flex flex-col space-y-4'>
         <div className='flex flex-wrap gap-2'>
           <ul className='flex flex-wrap gap-2'>
@@ -34,7 +31,6 @@ const ProjectCard: React.FC<Project> = ({ name, description, technologies, image
             ))}
           </ul>
         </div>
-
         <h3 className='text-gray-600 dark:text-gray-300'>{description}</h3>
       </div>
     </div>
