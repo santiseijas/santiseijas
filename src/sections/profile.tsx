@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import FullScreenWrapper from '../components/fullScreenWrapper'
 import TypingEffect from '../components/typingEffect'
 
 interface ProfileProps {
@@ -21,34 +20,30 @@ const techStack = [
 
 const Profile: React.FC<ProfileProps> = ({ title, subtitle, link }) => {
   return (
-    <FullScreenWrapper>
-      <div className=''>
-        <div className=''>
-          <div className='relative h-[120px] w-[150px]'>
-            <Image
-              src='/assets/profile.jpeg'
-              alt='profile'
-              width={150}
-              height={150}
-              style={{ borderRadius: '70% 95% 55% 80%' }}
-            />
-          </div>
-          <TypingEffect words={['santiseijas']} typingSpeed={100} deletingSpeed={50} pauseTime={1000} />{' '}
-          <h3 className='mt-2'>{subtitle}</h3>
-          <a href={link} className='underline sm:text-blue-500'>
-            Find out more.
-          </a>
-        </div>
-        <div className='space-y-2'>
-          <h2 className='mt-8'>Tech Stack</h2>
-          <div className='flex flex-row gap-1'>
-            {techStack.map(tech => (
-              <Image key={tech.alt} src={tech.src} alt={tech.alt} width={70} height={70} className='h-10 w-10' />
-            ))}
-          </div>
+    <section id='profile' className='items-center justify-center py-10'>
+      <div className='relative h-[120px] w-[150px]'>
+        <Image
+          src='/assets/profile.jpeg'
+          alt='profile'
+          width={150}
+          height={150}
+          style={{ borderRadius: '70% 95% 55% 80%' }}
+        />
+      </div>
+      <TypingEffect words={['santiseijas']} typingSpeed={100} deletingSpeed={50} pauseTime={1000} />{' '}
+      <h3 className='mt-2'>{subtitle}</h3>
+      <a href={link} className='underline sm:text-blue-500'>
+        Find out more.
+      </a>
+      <div className='space-y-2'>
+        <h2 className='mt-8'>Tech Stack</h2>
+        <div className='flex flex-row gap-1'>
+          {techStack.map(tech => (
+            <Image key={tech.alt} src={tech.src} alt={tech.alt} width={70} height={70} className='h-10 w-10' />
+          ))}
         </div>
       </div>
-    </FullScreenWrapper>
+    </section>
   )
 }
 

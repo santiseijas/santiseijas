@@ -9,10 +9,10 @@ interface TimelineItemProps {
 const TimelineItem: React.FC<TimelineItemProps> = ({ title, description, year }) => {
   return (
     <div className='relative pb-10 pl-5'>
-      <div className='absolute left-0 top-2 h-5 w-5 rounded-full border-2 border-gray-600 bg-blue-100'></div>
-      <h2 className='ml-2'>{title}</h2>
+      <div className='absolute left-0 top-2 h-3 w-3 rounded-full border-2 border-gray-600 bg-blue-100'></div>
+      <h2>{title}</h2>
       <p>{year}</p>
-      <ul className='list-disc pl-5'>
+      <ul className='list-disc pl-3'>
         {description.map((item, index) => (
           <li key={index} className=''>
             <h3>{item}</h3>

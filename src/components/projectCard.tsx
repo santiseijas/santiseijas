@@ -1,12 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import 'swiper/css'
-import 'swiper/css/autoplay'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
-import { A11y, Autoplay, Navigation } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 interface Project {
   name: string
@@ -17,28 +10,17 @@ interface Project {
 
 const ProjectCard: React.FC<Project> = ({ name, description, technologies, images }) => {
   return (
-    <div className='flex flex-col space-y-8 rounded-lg transition md:flex-row md:space-x-8 md:space-y-0'>
-      <div className='w-full flex-grow md:w-1/2'>
-        <Swiper modules={[Navigation, A11y, Autoplay]} spaceBetween={5} slidesPerView={3} autoplay={true}>
-          {images.map(i => (
-            <SwiperSlide key={i.alt}>
-              <div className='relative h-80 w-full overflow-hidden rounded-lg shadow-md'>
-                <Image
-                  src={i.src}
-                  alt={i.alt}
-                  layout='fill'
-                  objectFit='cover'
-                  className='transition duration-300 ease-in-out hover:scale-105'
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <div className='space-y-4 rounded-lg'>
+      <h2 className=''>{name}</h2>
+      <div className='flex space-x-4 overflow-x-auto'>
+        {images.map(i => (
+          <div key={i.src} className=''>
+            <Image src={i.src} alt={i.alt} height={192} width={96} />
+          </div>
+        ))}
       </div>
 
-      <div className='w-full flex-grow md:w-1/2'>
-        <h2>{name}</h2>
-
+      <div className='flex flex-col space-y-4'>
         <div className='mt-4 flex flex-wrap gap-2'>
           <ul className='mb-2 flex flex-wrap gap-2'>
             {technologies.map(tech => (
@@ -51,9 +33,7 @@ const ProjectCard: React.FC<Project> = ({ name, description, technologies, image
           </ul>
         </div>
 
-        <h3 className='relative flex flex-col gap-2 pb-4 text-gray-600 md:col-span-3 dark:text-gray-300'>
-          {description}
-        </h3>
+        <h3 className='text-gray-600 dark:text-gray-300'>{description}</h3>
       </div>
     </div>
   )

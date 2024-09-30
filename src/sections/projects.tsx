@@ -1,5 +1,4 @@
 import ProjectCard from '@/src/components/projectCard'
-import FullScreenWrapper from '../components/fullScreenWrapper'
 
 const projects = [
   {
@@ -79,15 +78,15 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <FullScreenWrapper>
-      <div className='h-screen max-w-5xl flex-col justify-center py-1'>
+    <div className='py-10'>
+      <div className='justify-center py-1'>
         {projects.map(project => (
           <div key={project.name}>
             <ProjectCard key={project.name} {...project} images={project.images} />
           </div>
         ))}
       </div>
-    </FullScreenWrapper>
+    </div>
   )
 }
 export default Projects
