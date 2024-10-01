@@ -3,7 +3,6 @@ import React from 'react'
 import TypingEffect from '../components/typingEffect'
 
 interface ProfileProps {
-  title: string
   subtitle: string
   link: string
   techStack: { src: string; alt: string }[]
@@ -18,10 +17,10 @@ const techStack = [
   { src: '/assets/html.svg', alt: 'html' }
 ]
 
-const Profile: React.FC<ProfileProps> = ({ title, subtitle, link }) => {
+const Profile: React.FC<ProfileProps> = ({ subtitle, link }) => {
   return (
     <section id='profile' className='items-center justify-center'>
-      <div className='relative my-8 h-[120px] w-[150px]'>
+      <div>
         <Image
           src='/assets/profile.jpeg'
           alt='profile'

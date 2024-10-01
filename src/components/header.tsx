@@ -15,7 +15,7 @@ const Header: React.FC = () => {
           <h3 className='text-gray-700 hover:text-gray-400'>Projects</h3>
         </Link>
         <Link href='#contact' passHref>
-          <h3 className='text-gray-700 hover:text-gray-400'>Contacto</h3>
+          <h3 className='text-gray-700 hover:text-gray-400'>Contact</h3>
         </Link>
       </nav>
     </header>

@@ -1,11 +1,9 @@
 import React from 'react'
 import TimelineItem from '../components/timelineItem'
-import TitlePage from '../components/titlePage'
 
 const Experience: React.FC = () => {
   return (
     <div className=''>
-      <TitlePage title='Experience' icon={{ src: '/assets/work.svg', alt: 'experience' }} />
       <section className='items-center justify-center'>
         <TimelineItem
           title='React Native Developer, VASS'

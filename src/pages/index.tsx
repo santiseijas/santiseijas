@@ -21,24 +21,23 @@ const HomeScreen: React.FC = () => {
         <div className='max-w-xl'>
           <section id='profile' className='mt-24 scroll-mt-20'>
             <Profile
-              title="hello, I'm santiseijas"
               subtitle="I'm a Frontend Developer with 4 years of experience in React Native and 1 year of experience in React. Born and living in Spain 🇪🇸"
               link='https://github.com/santiseijas'
               techStack={techStack}
             />
           </section>
           <section id='experience' className='mt-24 scroll-mt-20'>
+            <TitlePage title='Experience' icon={{ src: '/assets/work.svg', alt: 'experience' }} />
+
             <Experience />
           </section>
 
           <section id='projects' className='mt-24 scroll-mt-20'>
             <TitlePage title='Projects' icon={{ src: '/assets/projects.svg', alt: 'projects' }} />
-
             <Projects />
           </section>
           <section id='contact' className='mt-24 scroll-mt-20'>
-            <TitlePage title='Contact' />
-
+            <TitlePage title='Contact' icon={{ src: '/assets/contact.svg', alt: 'projects' }} />
             <Contact />
           </section>
         </div>

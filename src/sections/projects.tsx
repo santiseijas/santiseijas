@@ -6,6 +6,8 @@ const projects = [
     description:
       'A white-label application for vehicle rentals, offering both micromobility options (rentals by the minute) and longer-term rentals (rent a car). Responsible for all aspects of the app, including new feature development, bug fixing, and managing app store submissions.',
     technologies: ['React Native', 'Firebase', 'TypeScript', 'Jenkins'],
+    icon: '/assets/eccocar-icon.png',
+
     images: [
       {
         src: 'https://play-lh.googleusercontent.com/dYfdD_INFez_5gESF9sOl1lGbhMyVvpHJByNqA3U3LqLhgYoHTxfmH5ZOpCmwG8q4yA=w526-h296-rw',
@@ -39,6 +41,7 @@ const projects = [
       'An app for reserving and paying for parking, focused on the UK market. Responsible for error correction, app maintenance, and implementing new features as requested by the client.',
     technologies: ['React Native', 'TypeScript', 'GitlabCI', 'Detox'],
     link: 'https://play.google.com/store/apps/details?id=com.saba.parking',
+    icon: '/assets/saba-icon.png',
     images: [
       {
         src: 'https://play-lh.googleusercontent.com/etxDEgp5xYthHzgmmT45VUCoC5wBNFannt2Hvx1oqD643ir5aKIwqEEC4R96001y5xo=w526-h296-rw',

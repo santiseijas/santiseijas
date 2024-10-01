@@ -6,12 +6,16 @@ interface Project {
   description: string
   technologies: string[]
   images: { src: string; alt: string }[]
+  icon: string
 }
 
-const ProjectCard: React.FC<Project> = ({ name, description, technologies, images }) => {
+const ProjectCard: React.FC<Project> = ({ name, description, technologies, images, icon }) => {
   return (
-    <div className='my-8 rounded-lg'>
-      <h2 className='my-8'>{name}</h2>
+    <div className=''>
+      <div className='my-8 flex flex-row items-center space-x-2'>
+        <Image src={icon} alt={'ad'} height={40} width={40} className='rounded-xl' />
+        <h2 className=''>{name}</h2>
+      </div>
       <div className='grid gap-2 sm:grid-cols-3 md:flex md:overflow-x-auto lg:grid-cols-5'>
         {images.map(i => (
           <div key={i.src} className='relative h-48 w-28 overflow-hidden rounded-lg shadow-md'>
