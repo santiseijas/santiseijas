@@ -10,17 +10,17 @@ interface Project {
 
 const ProjectCard: React.FC<Project> = ({ name, description, technologies, images }) => {
   return (
-    <div className='space-y-4 rounded-lg pb-10'>
-      <h2 className=''>{name}</h2>
-      <div className='grid gap-2 overflow-x-auto sm:grid-cols-3 md:flex md:overflow-x-auto lg:grid-cols-5'>
+    <div className='my-8 rounded-lg'>
+      <h2 className='my-8'>{name}</h2>
+      <div className='grid gap-2 sm:grid-cols-3 md:flex md:overflow-x-auto lg:grid-cols-5'>
         {images.map(i => (
-          <div key={i.src} className='relative mb-2 h-48 w-28 overflow-hidden rounded-lg shadow-md'>
+          <div key={i.src} className='relative h-48 w-28 overflow-hidden rounded-lg shadow-md'>
             <Image src={i.src} alt={i.alt} layout='fill' />
           </div>
         ))}
       </div>
-      <div className='flex flex-col space-y-4'>
-        <div className='flex flex-wrap gap-2'>
+      <div className='flex flex-col'>
+        <div className='my-4 flex flex-wrap gap-2'>
           <ul className='flex flex-wrap gap-2'>
             {technologies.map(tech => (
               <li key={tech}>

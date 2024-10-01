@@ -20,8 +20,8 @@ const techStack = [
 
 const Profile: React.FC<ProfileProps> = ({ title, subtitle, link }) => {
   return (
-    <section id='profile' className='items-center justify-center py-10'>
-      <div className='relative h-[120px] w-[150px]'>
+    <section id='profile' className='items-center justify-center'>
+      <div className='relative my-8 h-[120px] w-[150px]'>
         <Image
           src='/assets/profile.jpeg'
           alt='profile'
@@ -31,12 +31,12 @@ const Profile: React.FC<ProfileProps> = ({ title, subtitle, link }) => {
         />
       </div>
       <TypingEffect words={['santiseijas']} typingSpeed={100} deletingSpeed={50} pauseTime={1000} />{' '}
-      <h3 className='mt-2'>{subtitle}</h3>
+      <h3 className=''>{subtitle}</h3>
       <a href={link} className='underline sm:text-blue-500'>
         Find out more.
       </a>
-      <div className='space-y-2'>
-        <h2 className='mt-8'>Tech Stack</h2>
+      <div className='my-8'>
+        <h2 className=''>Tech Stack</h2>
         <div className='flex flex-row gap-1'>
           {techStack.map(tech => (
             <Image key={tech.alt} src={tech.src} alt={tech.alt} width={70} height={70} className='h-10 w-10' />

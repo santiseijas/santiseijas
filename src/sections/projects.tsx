@@ -79,7 +79,7 @@ const projects = [
 const Projects: React.FC = () => {
   return (
     <div className=''>
-      <div className='justify-center py-1'>
+      <div className='justify-center'>
         {projects.map(project => (
           <div key={project.name}>
             <ProjectCard key={project.name} {...project} images={project.images} />

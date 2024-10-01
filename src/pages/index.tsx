@@ -1,5 +1,6 @@
 import React from 'react'
 import TitlePage from '../components/titlePage'
+import Contact from '../sections/contact'
 import Experience from '../sections/experience'
 import Profile from '../sections/profile'
 import Projects from '../sections/projects'
@@ -31,15 +32,15 @@ const HomeScreen: React.FC = () => {
           </section>
 
           <section id='projects' className='mt-24 scroll-mt-20'>
-            <TitlePage title='Projects' />
+            <TitlePage title='Projects' icon={{ src: '/assets/projects.svg', alt: 'projects' }} />
 
             <Projects />
           </section>
-          {/* <section id='contact' className='mt-24 scroll-mt-20'>
+          <section id='contact' className='mt-24 scroll-mt-20'>
             <TitlePage title='Contact' />
 
             <Contact />
-          </section> */}
+          </section>
         </div>
       </section>
     </main>
