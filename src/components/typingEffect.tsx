@@ -51,7 +51,7 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
 
   return (
     <div className='my-8'>
-      <h1 className='tracking-tight text-zinc-800 dark:text-white'>
+      <h1 className='tracking-tight dark:text-white'>
         hello
         <span className='animate-wave ml-2 inline-block' role='img' aria-label='hand-wave'>
           👋

@@ -1,4 +1,6 @@
 import ProjectCard from '@/src/components/projectCard'
+import { FadeIn } from '../components/fade-in'
+import TitlePage from '../components/titlePage'
 
 const projects = [
   {
@@ -81,15 +83,19 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <div className=''>
+    <FadeIn>
+      <TitlePage title='Projects' icon={{ src: '/assets/projects.svg', alt: 'projects' }} />
+
       <div className='justify-center'>
         {projects.map(project => (
           <div key={project.name}>
-            <ProjectCard key={project.name} {...project} images={project.images} />
+            <FadeIn>
+              <ProjectCard key={project.name} {...project} images={project.images} />
+            </FadeIn>
           </div>
         ))}
       </div>
-    </div>
+    </FadeIn>
   )
 }
 export default Projects

@@ -51,3 +51,8 @@ p {
   animation: wave 2s infinite ease-in-out;
   transform-origin: 70% 70%;
 }
+:root {
+  --header-row-height: 44px;
+  --header-height: calc(var(--header-row-height) * 2);
+  --hero-height: calc(100svh - var(--header-height));
+}

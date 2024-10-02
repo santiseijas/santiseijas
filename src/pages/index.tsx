@@ -27,13 +27,10 @@ const HomeScreen: React.FC = () => {
             />
           </section>
           <section id='experience' className='mt-24 scroll-mt-20'>
-            <TitlePage title='Experience' icon={{ src: '/assets/work.svg', alt: 'experience' }} />
-
             <Experience />
           </section>
 
           <section id='projects' className='mt-24 scroll-mt-20'>
-            <TitlePage title='Projects' icon={{ src: '/assets/projects.svg', alt: 'projects' }} />
             <Projects />
           </section>
           <section id='contact' className='mt-24 scroll-mt-20'>
